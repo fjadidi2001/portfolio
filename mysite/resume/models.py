@@ -2,7 +2,6 @@ from django.db import models
 
 
 class Resume(models.Model):
-    objects = None
     name = models.CharField(max_length=255)
     email = models.EmailField()
     phone = models.CharField(max_length=20)
