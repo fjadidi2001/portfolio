@@ -1,10 +1,10 @@
 from django.shortcuts import render
-from models import Resume
+from .models import Resume
 
 
 def resume(request):
-    resume = Resume.objects.get(id=1)
+    resu1me = Resume.objects.get(id=1)
     context = {
-        'resume': resume,
+        'resume': resu1me,
     }
     return render(request, 'resume.html', context)
