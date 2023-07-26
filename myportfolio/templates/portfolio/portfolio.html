@@ -88,19 +88,36 @@
     <p>{{ workExperience.description }}</p>
     {% endfor %}
 </section>
+<section>
+    <h2>Skills</h2>
+    {% for skills in skills %}
+    <p>{{ skills.title }}</p>
+    <p>{{ skills.description }}</p>
+    {% endfor %}
+</section>
+<section>
+    <h2>Project</h2>
+    {% for project in project %}
+    <p>{{ project.title }}</p>
+    <p>{{ project.description }}</p>
+    {% endfor %}
+</section>
+<section>
+    <h2>AcademicReferences</h2>
+    {% for academicReferences in academicReferences %}
+    <p>{{ academicReferences.title }}</p>
+    <p>{{ academicReferences.description }}</p>
+    {% endfor %}
+</section>
+<section>
+    <h2>professionalReferences</h2>
+    {% for professionalReferences in professionalReferences %}
+    <p>{{ professionalReferences.title }}</p>
+    <p>{{ professionalReferences.description }}</p>
+    {% endfor %}
+</section>
 
-
-    <section>
-        <h2>My Projects</h2>
-        {% for project in projects %}
-        <div class="project-card">
-            <h3>{{ project.title }}</h3>
-            <img src="{{ project.image.url }}" alt="{{ project.title }}">
-            <p>{{ project.description }}</p>
-        </div>
-        {% endfor %}
-    </section>
-    <script src="{% static 'js/script.js' %}"></script>
+<script src="{% static 'js/script.js' %}"></script>
 
 </body>
 </html>
