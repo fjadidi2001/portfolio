@@ -1,6 +1,6 @@
 <!--templates/portfolio.html-->
 <!DOCTYPE html>
-{% load static %}
+{% load staticfiles %}
 
 <html lang="en">
 
@@ -9,7 +9,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Portfolio</title>
-    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <link rel="stylesheet" href="{% staticfiles 'css/styles.css' %}">
 
 </head>
 
@@ -117,7 +117,7 @@
     {% endfor %}
 </section>
 
-<script src="{% static 'js/script.js' %}"></script>
+<script src="{% staticfiles 'js/script.js' %}"></script>
 
 </body>
 </html>
