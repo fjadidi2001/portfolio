@@ -1,36 +1,95 @@
-
+<!--templates/portfolio.html-->
 <!DOCTYPE html>
 {% load static %}
 
 <html lang="en">
+
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Portfolio</title>
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="256" height="256" viewBox="0 0 256 256" xml:space="preserve">
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
 
-<defs>
-
-</defs>
-<g style="stroke: none; stroke-width: 0; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: none; fill-rule: nonzero; opacity: 1;" transform="translate(1.4065934065934016 1.4065934065934016) scale(2.81 2.81)" >
-	<path d="M 45 0 C 20.147 0 0 20.467 0 45.714 C 0 67.034 14.367 84.944 33.802 90 c -0.013 -5.283 -0.03 -11.763 -0.04 -13.782 c -12.986 2.869 -15.726 -5.595 -15.726 -5.595 c -2.123 -5.481 -5.183 -6.939 -5.183 -6.939 c -4.236 -2.943 0.319 -2.883 0.319 -2.883 c 4.687 0.334 7.156 4.887 7.156 4.887 c 4.163 7.249 10.92 5.153 13.584 3.942 c 0.419 -3.064 1.628 -5.157 2.964 -6.341 c -10.368 -1.199 -21.268 -5.265 -21.268 -23.435 c 0 -5.177 1.824 -9.407 4.81 -12.728 c -0.485 -1.195 -2.083 -6.018 0.452 -12.55 c 0 0 3.92 -1.274 12.84 4.861 c 3.724 -1.051 7.717 -1.578 11.684 -1.596 c 3.967 0.018 7.963 0.545 11.694 1.596 c 8.91 -6.135 12.824 -4.861 12.824 -4.861 c 2.541 6.532 0.943 11.355 0.458 12.55 c 2.993 3.321 4.804 7.551 4.804 12.728 c 0 18.214 -10.92 22.223 -21.315 23.398 c 1.674 1.472 3.166 4.357 3.166 8.781 c 0 3.513 -0.016 11.601 -0.031 17.74 C 76.021 84.439 90 66.74 90 45.714 C 90 20.467 69.853 0 45 0 z" style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(0,0,0); fill-rule: nonzero; opacity: 1;" transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" />
-</g>
-</svg>
-    <a href="https://github.com/fjadidi2001">GitHub</a>
 </head>
+
+
+
 <body>
     <header>
-        <h1>Fateme <strong>Jadidi</strong></h1>
-        <p>BACKEND DEVELOPER</p>
-        <div class="link">
-        <link rel="icon" href="././" type="image/x-icon">
+        <h1 class="myName">
+            Fateme
+            <strong>Jadidi</strong>
+        </h1>
+        <p class="myJob">BACKEND DEVELOPER</p>
+        <div class="icon">
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="20"
+             height="20" viewBox="0 0 256 256" xml:space="preserve">
+
+            <g style="stroke: none; stroke-width: 0; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: none; fill-rule: nonzero; opacity: 1;" transform="translate(1.4065934065934016 1.4065934065934016) scale(2.81 2.81)" >
+                <path d="M 45 0 C 20.147 0 0 20.467 0 45.714 C 0 67.034 14.367 84.944 33.802 90 c -0.013 -5.283 -0.03 -11.763 -0.04 -13.782 c -12.986 2.869 -15.726 -5.595 -15.726 -5.595 c -2.123 -5.481 -5.183 -6.939 -5.183 -6.939 c -4.236 -2.943 0.319 -2.883 0.319 -2.883 c 4.687 0.334 7.156 4.887 7.156 4.887 c 4.163 7.249 10.92 5.153 13.584 3.942 c 0.419 -3.064 1.628 -5.157 2.964 -6.341 c -10.368 -1.199 -21.268 -5.265 -21.268 -23.435 c 0 -5.177 1.824 -9.407 4.81 -12.728 c -0.485 -1.195 -2.083 -6.018 0.452 -12.55 c 0 0 3.92 -1.274 12.84 4.861 c 3.724 -1.051 7.717 -1.578 11.684 -1.596 c 3.967 0.018 7.963 0.545 11.694 1.596 c 8.91 -6.135 12.824 -4.861 12.824 -4.861 c 2.541 6.532 0.943 11.355 0.458 12.55 c 2.993 3.321 4.804 7.551 4.804 12.728 c 0 18.214 -10.92 22.223 -21.315 23.398 c 1.674 1.472 3.166 4.357 3.166 8.781 c 0 3.513 -0.016 11.601 -0.031 17.74 C 76.021 84.439 90 66.74 90 45.714 C 90 20.467 69.853 0 45 0 z" style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(0,0,0); fill-rule: nonzero; opacity: 1;" transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" />
+            </g>
+        </svg>
+            <a href="https://github.com/fjadidi2001">GitHub</a>
+
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="20" height="20" viewBox="0 0 256 256" xml:space="preserve">
+
+
+            <g style="stroke: none; stroke-width: 0; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: none; fill-rule: nonzero; opacity: 1;" transform="translate(1.4065934065934016 1.4065934065934016) scale(2.81 2.81)" >
+	            <path d="M 45 0 C 20.147 0 0 20.147 0 45 c 0 24.853 20.147 45 45 45 c 24.853 0 45 -20.147 45 -45 C 90 20.147 69.853 0 45 0 z M 31.187 69.956 H 20.822 V 36.617 h 10.365 V 69.956 z M 26.005 32.062 c -3.32 0 -6.005 -2.692 -6.005 -6.007 c 0 -3.318 2.685 -6.011 6.005 -6.011 c 3.313 0 6.005 2.692 6.005 6.011 C 32.01 29.37 29.317 32.062 26.005 32.062 z M 70 69.956 H 59.643 V 53.743 c 0 -3.867 -0.067 -8.84 -5.385 -8.84 c -5.392 0 -6.215 4.215 -6.215 8.562 v 16.491 H 37.686 V 36.617 h 9.939 v 4.559 h 0.141 c 1.383 -2.622 4.764 -5.385 9.804 -5.385 C 68.063 35.791 70 42.694 70 51.671 V 69.956 z" style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(0,0,0); fill-rule: nonzero; opacity: 1;" transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" />
+            </g>
+        </svg>
+            <a href="https://www.linkedin.com/in/fateme-jadidi2001/">Linkdien</a>
+
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="20" height="20" viewBox="0 0 256 256" xml:space="preserve">
+
+
+            <g style="stroke: none; stroke-width: 0; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: none; fill-rule: nonzero; opacity: 1;" transform="translate(1.4065934065934016 1.4065934065934016) scale(2.81 2.81)" >
+	            <path d="M 79.35 77.115 H 10.651 C 4.778 77.115 0 72.337 0 66.464 V 23.536 c 0 -5.873 4.778 -10.65 10.65 -10.65 H 79.35 c 5.873 0 10.65 4.778 10.65 10.65 v 42.928 C 90 72.337 85.223 77.115 79.35 77.115 z M 10.65 19.885 c -2.013 0 -3.65 1.638 -3.65 3.65 v 42.928 c 0 2.014 1.638 3.651 3.651 3.651 H 79.35 c 2.013 0 3.65 -1.638 3.65 -3.651 V 23.536 c 0 -2.013 -1.638 -3.65 -3.65 -3.65 H 10.65 z" style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(0,0,0); fill-rule: nonzero; opacity: 1;" transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" />
+	            <path d="M 45 60.229 c -0.796 0 -1.592 -0.271 -2.241 -0.812 l -30.71 -25.595 c -1.485 -1.237 -1.686 -3.444 -0.448 -4.93 c 1.237 -1.483 3.445 -1.686 4.929 -0.447 L 45 52.173 l 28.469 -23.727 c 1.484 -1.238 3.691 -1.036 4.93 0.447 c 1.237 1.485 1.037 3.692 -0.447 4.93 l -30.71 25.595 C 46.592 59.959 45.796 60.229 45 60.229 z" style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(0,0,0); fill-rule: nonzero; opacity: 1;" transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" />
+            </g>
+        </svg>
+            <a href="mailto:fjadidi2001@gmail.com">fjadidi2001@gmail.com</a>
+
+
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="20" height="20" viewBox="0 0 256 256" xml:space="preserve">
+
+
+            <g style="stroke: none; stroke-width: 0; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: none; fill-rule: nonzero; opacity: 1;" transform="translate(1.4065934065934016 1.4065934065934016) scale(2.81 2.81)" >
+	            <path d="M 64.533 0 H 25.467 c -3.829 0 -6.944 3.115 -6.944 6.944 v 76.112 c 0 3.829 3.115 6.944 6.944 6.944 h 39.065 c 3.829 0 6.944 -3.115 6.944 -6.944 V 6.944 C 71.477 3.115 68.362 0 64.533 0 z M 22.436 18.017 h 45.128 V 70.52 H 22.436 V 18.017 z M 25.467 3.913 h 39.065 c 1.672 0 3.031 1.359 3.031 3.031 v 7.16 H 22.436 v -7.16 C 22.436 5.272 23.796 3.913 25.467 3.913 z M 64.533 86.087 H 25.467 c -1.671 0 -3.031 -1.359 -3.031 -3.031 v -8.623 h 45.128 v 8.623 C 67.564 84.728 66.205 86.087 64.533 86.087 z" style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(0,0,0); fill-rule: nonzero; opacity: 1;" transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" />
+	            <circle cx="45.004" cy="80.26400000000001" r="3.424" style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(0,0,0); fill-rule: nonzero; opacity: 1;" transform="  matrix(1 0 0 1 0 0) "/>
+	            <path d="M 50.407 11.01 H 39.593 c -1.08 0 -1.957 -0.876 -1.957 -1.957 s 0.876 -1.957 1.957 -1.957 h 10.814 c 1.08 0 1.957 0.876 1.957 1.957 S 51.488 11.01 50.407 11.01 z" style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(0,0,0); fill-rule: nonzero; opacity: 1;" transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" />
+            </g>
+        </svg>
+            <a href="tel:+989928624761">(+98)992 862 4761</a>
+
 
         </div>
+
     </header>
-    <section>
-        <h2>About Me</h2>
-        <p>I am a web developer passionate about creating amazing websites.</p>
-    </section>
+<section>
+    <h2>Summary</h2>
+    {% for summary in summary %}
+    <p>{{ summary.title }}</p>
+    <p>{{ summary.description }}</p>
+    {% endfor %}
+</section>
+<section>
+    <h2>Education</h2>
+    {% for education in education %}
+    <p>{{ education.title }}</p>
+    <p>{{ education.description }}</p>
+    {% endfor %}
+</section>
+<section>
+    <h2>Work Experience</h2>
+    {% for workExperience in workExperience %}
+    <p>{{ workExperience.title }}</p>
+    <p>{{ workExperience.description }}</p>
+    {% endfor %}
+</section>
+
+
     <section>
         <h2>My Projects</h2>
         {% for project in projects %}
@@ -41,8 +100,7 @@
         </div>
         {% endfor %}
     </section>
-    <section>
+    <script src="{% static 'js/script.js' %}"></script>
 
-    </section>
 </body>
 </html>

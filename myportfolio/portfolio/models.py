@@ -1,3 +1,4 @@
+# this is my model
 from django.db import models
 
 
@@ -34,4 +35,3 @@ class AcademicReferences(models.Model):
 class ProfessionalReferences(models.Model):
     title = models.CharField(max_length=100)
     description = models.TextField()
-
