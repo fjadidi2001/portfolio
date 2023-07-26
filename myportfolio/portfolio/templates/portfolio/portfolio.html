@@ -1,0 +1,39 @@
+<!-- portfolio/templates/portfolio/portfolio.html -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Portfolio</title>
+</head>
+<body>
+    <h1>Projects:</h1>
+    <ul>
+        {% for project in projects %}
+        <li>
+            <h2>{{ project.title }}</h2>
+            <p>{{ project.description }}</p>
+        </li>
+        {% endfor %}
+    </ul>
+
+    <h1>Skills:</h1>
+    <ul>
+        {% for skill in skills %}
+        <li>
+            <h3>{{ skill.name }}</h3>
+            <p>{{ skill.description }}</p>
+        </li>
+        {% endfor %}
+    </ul>
+
+    <h1>Experiences:</h1>
+    <ul>
+        {% for experience in experiences %}
+        <li>
+            <h3>{{ experience.title }}</h3>
+            <p>{{ experience.description }}</p>
+        </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
