@@ -1,3 +1,4 @@
+<!-- portfolio/portfolio.html -->
 
 <!DOCTYPE html>
 <html lang="en">
@@ -5,50 +6,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
 </head>
 <body>
     <header>
-        <nav>
-            <ul>
-                <li><a href="#about">About</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
+        <h1>Welcome to My Portfolio</h1>
+        <p>Check out my projects and skills.</p>
     </header>
-
-    <section id="about">
-        <h1>About Me</h1>
-        <p>Hello! I am a web developer passionate about creating amazing websites.</p>
+    <section>
+        <h2>About Me</h2>
+        <p>I am a web developer passionate about creating amazing websites.</p>
     </section>
-
-    <section id="projects">
-        <h1>My Projects</h1>
+    <section>
+        <h2>My Projects</h2>
+        {% for project in projects %}
         <div class="project-card">
-            <img src="project1.jpg" alt="Project 1">
-            <h2>Project 1</h2>
-            <p>Description of Project 1.</p>
+            <h3>{{ project.title }}</h3>
+            <img src="{{ project.image.url }}" alt="{{ project.title }}">
+            <p>{{ project.description }}</p>
         </div>
-        <!-- Add more project cards as needed -->
+        {% endfor %}
     </section>
-
-    <section id="contact">
-        <h1>Contact Me</h1>
-        <form>
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required>
-
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
-
-            <label for="message">Message:</label>
-            <textarea id="message" name="message" required></textarea>
-
-            <button type="submit">Send</button>
-        </form>
-    </section>
-
-    <script src="{% static 'scripts.js' %}"></script>
 </body>
 </html>
