@@ -1,6 +1,6 @@
 <!--templates/portfolio.html-->
 <!DOCTYPE html>
-{% load staticfiles %}
+{% load static %}
 
 <html lang="en">
 
@@ -9,7 +9,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Portfolio</title>
-    <link rel="stylesheet" href="{% staticfiles 'css/styles.css' %}">
+<!--    <link rel="stylesheet" href="{% static   'css/styles.css' %}">-->
 
 </head>
 
@@ -69,13 +69,18 @@
     </header>
 <section>
     <h2>Summary</h2>
-    {% for summary in summary %}
-    <p>{{ summary.title }}</p>
-    <p>{{ summary.description }}</p>
+    <p>I studied computer science at Semnan University from 2020 to 2023. I am an enthusiastic and dedicated Backend Developer with a keen interest in building efficient and scalable solutions. I have hands-on experience in crafting RESTful APIs, managing databases, and working with various server-side technologies. My proficiency includes Python, Go, and Node.js. I am driven by collaborative problem-solving and have a strong passion for delivering seamless user experiences. Additionally, I am well-versed in utilizing Git for version control, familiar with ChatGPT for natural language processing tasks, and experienced in working with Linux environments. I am eager to contribute to impactful projects and thrive in collaborating within a dynamic development team.</p>
+
+    {% for summary_item in summary %}
+    <p>{{ summary_item.title }}</p>
+
     {% endfor %}
 </section>
+
+
 <section>
     <h2>Education</h2>
+    <li<\
     {% for education in education %}
     <p>{{ education.title }}</p>
     <p>{{ education.description }}</p>
@@ -117,7 +122,7 @@
     {% endfor %}
 </section>
 
-<script src="{% staticfiles 'js/script.js' %}"></script>
+<!--<script src="{% static 'js/script.js' %}"></script>-->
 
 </body>
 </html>
