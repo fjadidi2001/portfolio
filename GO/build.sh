@@ -1,5 +1,5 @@
 #!/bin/bash
 
 echo "Building the project..."
-go build -o portfolio
+go build -o GO
 echo "Build completed!"
