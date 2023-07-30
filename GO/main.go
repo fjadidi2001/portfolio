@@ -5,10 +5,15 @@ import (
 	"net/http"
 )
 
+// Handler Functions
 func serveStaticFile(w http.ResponseWriter, r *http.Request) {
 	http.ServeFile(w, r, r.URL.Path[1:])
 }
 
+/*serveStaticFile: This function is a simple static file server that allows us to serve static files
+(like CSS, images, etc.) from the static directory. It uses http.ServeFile to handle the file serving.
+
+*/
 func indexHandler(w http.ResponseWriter, r *http.Request) {
 	tmpl, err := template.ParseFiles("templates/index.html")
 	if err != nil {
@@ -18,6 +23,9 @@ func indexHandler(w http.ResponseWriter, r *http.Request) {
 	tmpl.Execute(w, nil)
 }
 
+/* indexHandler: This function handles the root URL / of our website.
+It reads the index.html file from the templates folder, parses it using the template package, and then executes the template by passing nil as data.
+*/
 func main() {
 	http.HandleFunc("/static/", serveStaticFile)
 	http.HandleFunc("/", indexHandler)
