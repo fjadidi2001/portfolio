@@ -10,3 +10,13 @@ function animateText() {
 
 // Add a click event listener to the button
 animateBtn.addEventListener('click', animateText);
+const buildBtn = document.getElementById('buildBtn');
+
+function buildProject() {
+    fetch('/build')
+        .then(response => response.text())
+        .then(output => alert(output))
+        .catch(error => alert('Failed to build the project.'));
+}
+
+buildBtn.addEventListener('click', buildProject);
