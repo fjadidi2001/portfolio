@@ -3,6 +3,7 @@ package main
 import (
 	"html/template"
 	"net/http"
+	"os/exec"
 )
 
 // Handler Functions
@@ -22,6 +23,16 @@ func indexHandler(w http.ResponseWriter, r *http.Request) {
 	}
 	tmpl.Execute(w, nil)
 }
+func buildHandler(w http.ResponseWriter, r *http.Request) {
+	cmd := exec.Command("./build.sh")
+	output, err := cmd.CombinedOutput()
+	if err != nil {
+		http.Error(w, "Failed to execute the build script.", http.StatusInternalServerError)
+		return
+	}
+	w.Header().Set("Content-Type", "text/plain")
+	w.Write(output)
+}
 
 /* indexHandler: This function handles the root URL / of our website.
 It reads the index.html file from the templates folder, parses it using the template package, and then executes the template by passing nil as data.
@@ -29,6 +40,7 @@ It reads the index.html file from the templates folder, parses it using the temp
 func main() {
 	http.HandleFunc("/static/", serveStaticFile)
 	http.HandleFunc("/", indexHandler)
+	http.HandleFunc("/build", buildHandler)
 
 	port := "8080"
 	println("Server listening on port", port)
