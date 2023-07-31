@@ -33,6 +33,14 @@ func buildHandler(w http.ResponseWriter, r *http.Request) {
 	w.Header().Set("Content-Type", "text/plain")
 	w.Write(output)
 }
+func educationHandler(w http.ResponseWriter, r *http.Request) {
+	tmpl, err := template.ParseFiles("templates/education.html")
+	if err != nil {
+		http.Error(w, err.Error(), http.StatusInternalServerError)
+		return
+	}
+	tmpl.Execute(w, nil)
+}
 
 /* indexHandler: This function handles the root URL / of our website.
 It reads the index.html file from the templates folder, parses it using the template package, and then executes the template by passing nil as data.
