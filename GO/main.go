@@ -33,6 +33,7 @@ func buildHandler(w http.ResponseWriter, r *http.Request) {
 	w.Header().Set("Content-Type", "text/plain")
 	w.Write(output)
 }
+
 func educationHandler(w http.ResponseWriter, r *http.Request) {
 	tmpl, err := template.ParseFiles("templates/education.html")
 	if err != nil {
@@ -49,6 +50,7 @@ func main() {
 	http.HandleFunc("/static/", serveStaticFile)
 	http.HandleFunc("/", indexHandler)
 	http.HandleFunc("/build", buildHandler)
+	http.HandleFunc("/education", educationHandler)
 
 	port := "8080"
 	println("Server listening on port", port)
